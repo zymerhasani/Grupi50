@@ -21,6 +21,24 @@ void inputStudent(Student &s) {
     cin.ignore();
 }
 
+void displayStudent(const Student &s) {
+    cout << "\nEmri i studentit: " << s.name << endl;
+    cout << "Mosha: " << s.age << endl;
+    cout << "Notat: ";
+    for (int i = 0; i < 5; i++) {
+        cout << s.grades[i] << " ";
+    }
+    cout << endl;
+}
+
+float calculateAverage(const Student &s) {
+    float sum = 0;
+    for (int i = 0; i < 5; i++) {
+        sum += s.grades[i];
+    }
+    return sum / 5;
+}
+
 
 //Zymeri
 
