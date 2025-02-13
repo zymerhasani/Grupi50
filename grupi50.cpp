@@ -94,3 +94,24 @@ void findTopStudent(Student students[], int count) {
     determinePerformance(highestAvg);
 }
 
+//Ylli
+
+void countPassedStudents(Student students[], int count) {
+    int passed = 0;
+    for (int i = 0; i < count; i++) {
+        if (calculateAverage(students[i]) >= 50) {
+            passed++;
+        }
+    }
+    cout << "Numri i studenteve qe kane kaluar: " << passed << endl;
+}
+
+void countFailedStudents(Student students[], int count) {
+    int failed = 0;
+    for (int i = 0; i < count; i++) {
+        if (calculateAverage(students[i]) < 50) {
+            failed++;
+        }
+    }
+    cout << "Numri i studenteve qe kane rene: " << failed << endl;
+}
