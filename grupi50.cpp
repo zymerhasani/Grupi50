@@ -129,3 +129,28 @@ void displayStudentByName(Student students[], int count, string searchName) {
     }
 }
 
+//Blearti
+
+int main() {
+    const int MAX_STUDENTS = 100;
+    Student students[MAX_STUDENTS];
+    int studentCount = 0;
+    
+    int choice;
+    do {
+        cout << "\nSistemi per Menaxhimin e Studenteve\n";
+        cout << "1. Vendos te dhenat per studentin\n";
+        cout << "2. Shfaq te gjithe studentet\n";
+        cout << "3. Gjej studentin me te mire\n";
+        cout << "4. Numero studentet qe kane kaluar\n";
+        cout << "5. Numero studentet qe kane rene\n";
+        cout << "6. Kerko studentin sipas emrit\n";
+        cout << "7. Dil nga programi\n";
+        cout << "Zgjedh njerin nga opsionet: ";
+        cin >> choice;
+        cin.ignore();
+        
+    } while (choice != 7);
+    
+    return 0;
+}
