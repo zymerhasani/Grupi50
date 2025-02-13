@@ -64,3 +64,33 @@ void enterMultipleStudents(Student students[], int &count) {
     }
 }
 
+void displayAllStudents(Student students[], int count) {
+    cout << "\nShfaq te gjithe studentet:\n";
+    for (int i = 0; i < count; i++) {
+        displayStudent(students[i]);
+        float avg = calculateAverage(students[i]);
+        cout << "Nota mesatare: " << avg << endl;
+        determinePerformance(avg);
+    }
+}
+
+void findTopStudent(Student students[], int count) {
+    if (count == 0) {
+        cout << "Nuk ka te dhena per ndonje student, prandaj nuk mund te shfaqim studentin me te mire.\n";
+        return;
+    }
+    int topIndex = 0;
+    float highestAvg = calculateAverage(students[0]);
+    for (int i = 1; i < count; i++) {
+        float avg = calculateAverage(students[i]);
+        if (avg > highestAvg) {
+            highestAvg = avg;
+            topIndex = i;
+        }
+    }
+    cout << "\nStudenti me i mire:\n";
+    displayStudent(students[topIndex]);
+    cout << "Nota mesatare: " << highestAvg << endl;
+    determinePerformance(highestAvg);
+}
+
