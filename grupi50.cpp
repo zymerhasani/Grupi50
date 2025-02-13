@@ -115,3 +115,17 @@ void countFailedStudents(Student students[], int count) {
     }
     cout << "Numri i studenteve qe kane rene: " << failed << endl;
 }
+
+void displayStudentByName(Student students[], int count, string searchName) {
+    bool found = false;
+    for (int i = 0; i < count; i++) {
+        if (students[i].name == searchName) {
+            displayStudent(students[i]);
+            found = true;
+        }
+    }
+    if (!found) {
+        cout << "Studenti me kete emer nuk u gjet!\n";
+    }
+}
+
