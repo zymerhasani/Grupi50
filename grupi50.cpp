@@ -149,6 +149,41 @@ int main() {
         cout << "Zgjedh njerin nga opsionet: ";
         cin >> choice;
         cin.ignore();
+
+        switch (choice) {
+            case 1:
+                enterMultipleStudents(students, studentCount);
+                break;
+            case 2:
+                if (studentCount == 0) {
+                    cout << "Nuk ka te dhena te disponueshme per studentin!\n";
+                } else {
+                    displayAllStudents(students, studentCount);
+                }
+                break;
+            case 3:
+                findTopStudent(students, studentCount);
+                break;
+            case 4:
+                countPassedStudents(students, studentCount);
+                break;
+            case 5:
+                countFailedStudents(students, studentCount);
+                break;
+            case 6:
+                {
+                    string name;
+                    cout << "Sheno emrin e studentit qe po kerkon: ";
+                    getline(cin, name);
+                    displayStudentByName(students, studentCount, name);
+                }
+                break;
+            case 7:
+                cout << "Dalja nga programi.\n";
+                break;
+            default:
+                cout << "Zgjedhja eshte jovalide, ju lutem provoni perseri!\n";
+        }
         
     } while (choice != 7);
     
