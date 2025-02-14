@@ -42,3 +42,34 @@ The program includes:
 ## Prerequisites
 - C++ Compiler (e.g., g++ for GCC)
 - Terminal or Command Prompt
+
+## Configuration
+Ensure that:
+- The student capacity limit is set to 100.
+- Numerical values are entered correctly to prevent input errors.
+
+## Running the Application
+
+### Setting Up
+1. Clone or download the repository.
+2. Open a terminal or command prompt in the project directory.
+
+### Compiling the C++ Files
+Navigate to the project directory and compile the code:
+```sh
+ g++ -o Grupi50 Grupi50.cpp
+```
+
+## Authors
+- [Detjon Gjuraj](https://github.com/Detjon28)
+- [Zymer Hasani](https://github.com/zymerhasani)
+- [Yll Qoqaj](https://github.com/YllQoqaj)
+- [Bleart Spahiu](https://github.com/Bleart18)
+
+## License
+This project is open-source and available for modification and distribution.
+
+## Notes
+- The program supports a maximum of 100 students.
+- Enter valid numerical values for age and grades to avoid errors.
+- Use the menu system to interact with the program efficiently.
